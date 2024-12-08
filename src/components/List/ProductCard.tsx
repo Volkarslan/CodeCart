@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import { useDispatch } from "react-redux";
-import { addItem } from "../features/cartSlice";
+import { addItem } from "../../features/cartSlice";
 import { PlusCircleIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 
 /**

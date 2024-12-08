@@ -1,13 +1,6 @@
 import { faker } from "@faker-js/faker";
 import { ITEMS_PER_PAGE } from "../constants/const";
-
-export interface Product {
-  id: string;
-  image: string;
-  name: string;
-  price: string;
-  category: string;
-}
+import { Product } from "./../types/product";
 
 /**
  * Generates an array of fake products.

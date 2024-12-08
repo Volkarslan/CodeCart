@@ -1,5 +1,5 @@
 import React from "react";
-import { TRANSLATIONS } from "../constants/translations";
+import { TRANSLATIONS } from "../../constants/translations";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 const t = TRANSLATIONS["en"];

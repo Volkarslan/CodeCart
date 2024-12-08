@@ -2,20 +2,9 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 import { getInitials } from "../utils/stringUtils";
 import { TRANSLATIONS } from "../constants/translations";
+import { CartItem, CartState } from "../types/cart";
 
 const t = TRANSLATIONS["en"];
-
-interface CartItem {
-  id: string;
-  name: string;
-  price: string;
-  image: string;
-  quantity: number;
-}
-
-interface CartState {
-  items: CartItem[];
-}
 
 const initialState: CartState = {
   items: [],

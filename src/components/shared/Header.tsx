@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ShoppingCart from "../ShoppingCart";
+import ShoppingCart from "./ShoppingCart";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 import { useSelector } from "react-redux";
 import { RootState } from "../../context/store";
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-1 justify-end items-center relative">
+          <div className="flex flex-1 justify-end items-center relative ">
             <button
               className="text-sm flex text-gray-600 duration-300 hover:text-gray-800 transition"
               onClick={toggleCartVisibility}
@@ -61,15 +61,15 @@ const Header: React.FC = () => {
                 </span>
               )}
             </button>
+
+            {isCartVisible && (
+              <div className="absolute top-10 right-0 w-80 h-[66vh] shadow-lg z-50 bg-white ">
+                <ShoppingCart onClose={toggleCartVisibility} />
+              </div>
+            )}
           </div>
         </div>
       </header>
-
-      {isCartVisible && (
-        <div className="fixed top-24 right-6 w-80 h-2/3 shadow-lg z-50 bg-white">
-          <ShoppingCart onClose={toggleCartVisibility} />
-        </div>
-      )}
     </>
   );
 };

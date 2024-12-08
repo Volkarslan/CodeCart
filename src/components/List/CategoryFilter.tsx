@@ -1,5 +1,5 @@
 import React from "react";
-import { TRANSLATIONS } from "../constants/translations";
+import { TRANSLATIONS } from "../../constants/translations";
 
 const t = TRANSLATIONS["en"];
 

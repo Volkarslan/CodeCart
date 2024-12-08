@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { fetchFakeProducts } from "../data/fakeData";
-import SearchBar from "../components/SearchBar";
-import CategoryFilter from "../components/CategoryFilter";
-import ProductList from "../components/ProductList";
-import { MAX_PAGES, DEFAULT_CATEGORY } from "../constants/const";
+import { fetchFakeProducts } from "../../data/fakeData";
+import SearchBar from "../List/SearchBar";
+import CategoryFilter from "../List/CategoryFilter";
+import ProductList from "../List/ProductList";
+import { MAX_PAGES, DEFAULT_CATEGORY } from "../../constants/const";
 import { ArrowPathIcon } from "@heroicons/react/24/outline";
-import { TRANSLATIONS } from "../constants/translations";
+import { TRANSLATIONS } from "../../constants/translations";
 /**
  * Product interface representing individual product details.
  */
@@ -43,7 +43,7 @@ const SearchableFilterableInfiniteScrollList: React.FC = () => {
     setLoading(true);
     const newProducts = await fetchFakeProducts();
 
-    if (newProducts.length > 0) {
+    if (newProducts?.length > 0) {
       setAllProducts((prev) => [...prev, ...newProducts]);
       setDisplayedProducts((prev) => [...prev, ...newProducts]);
 

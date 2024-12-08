@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/shared/Layout";
-import SearchableFilterableInfiniteScrollList from "./SearchableFilterableInfiniteScrollList";
+import Layout from "../components/Layout/Layout";
+import SearchableFilterableInfiniteScrollList from "../components/Layout/SearchableFilterableInfiniteScrollList";
 
 /**
  * The main homepage component that wraps the infinite scroll list.
