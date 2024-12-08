@@ -5,6 +5,10 @@ import {
   CodeBracketIcon,
 } from "@heroicons/react/24/outline";
 
+import { TRANSLATIONS } from "../../constants/translations";
+
+const t = TRANSLATIONS["en"];
+
 interface NavigationItem {
   name: string;
   href: string;
@@ -61,7 +65,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
         <p className="mt-8 text-center text-sm text-gray-600 md:order-1 md:mt-0">
-          Made with{" "}
+          {t.project.dev_part_1}{" "}
           <span
             aria-label="love"
             role="img"
@@ -69,7 +73,7 @@ const Footer: React.FC = () => {
           >
             ❤️
           </span>{" "}
-          by Volkan Arslan
+          {t.project.dev_part_2}
         </p>
       </div>
     </footer>

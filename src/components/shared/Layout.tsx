@@ -13,7 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <main className="">
+      <main className="pt-8">
         <div className="flex-1 p-4">{children}</div>
       </main>
 

@@ -1,4 +1,7 @@
 import React from "react";
+import { TRANSLATIONS } from "../constants/translations";
+
+const t = TRANSLATIONS["en"];
 
 interface CategoryFilterProps {
   categories: string[];
@@ -12,7 +15,13 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
   setSelectedCategory,
 }) => {
   return (
-    <div className="mb-4 flex flex-col gap-2 flex-wrap px-4">
+    <div className="mb-4 flex flex-row md:flex-col gap-2 flex-wrap px-4">
+      <div className="w-full">
+        <h2 className="text-xl font-bold text-gray-800 pb-2.5 pl-2 pt-1 mb-2.5 relative mx-2">
+          {t.categoryFilter.title}
+          <span className="absolute bottom-0 left-0 w-52 md:w-full h-1 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full"></span>
+        </h2>
+      </div>
       {categories.map((category) => (
         <button
           key={category}

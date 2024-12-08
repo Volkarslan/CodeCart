@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Scroll olayını dinle
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {
