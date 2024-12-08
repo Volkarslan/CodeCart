@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useCallback } from "react";
+import { ArrowPathIcon } from "@heroicons/react/24/outline";
 import { fetchFakeProducts } from "../../data/fakeData";
-import SearchBar from "../List/SearchBar";
+import { MAX_PAGES, DEFAULT_CATEGORY } from "../../constants/const";
+import { TRANSLATIONS } from "../../constants/translations";
 import CategoryFilter from "../List/CategoryFilter";
 import ProductList from "../List/ProductList";
-import { MAX_PAGES, DEFAULT_CATEGORY } from "../../constants/const";
-import { ArrowPathIcon } from "@heroicons/react/24/outline";
-import { TRANSLATIONS } from "../../constants/translations";
+import React, { useState, useEffect, useCallback } from "react";
+import SearchBar from "../List/SearchBar";
 /**
  * Product interface representing individual product details.
  */

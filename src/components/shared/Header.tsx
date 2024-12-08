@@ -1,9 +1,9 @@
+import { RootState } from "../../context/store";
+import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import { TRANSLATIONS } from "../../constants/translations";
+import { useSelector } from "react-redux";
 import React, { useState } from "react";
 import ShoppingCart from "./ShoppingCart";
-import { ShoppingCartIcon } from "@heroicons/react/24/outline";
-import { useSelector } from "react-redux";
-import { RootState } from "../../context/store";
-import { TRANSLATIONS } from "../../constants/translations";
 
 /**
  * Header component that displays project info and shopping cart toggle.

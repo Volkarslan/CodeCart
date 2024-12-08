@@ -1,7 +1,7 @@
-import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect, vi } from "vitest"; // Vitest fonksiyonları
-import SearchBar from "../../../components/List/SearchBar";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { TRANSLATIONS } from "../../../constants/translations";
+import SearchBar from "../../../components/List/SearchBar";
 
 const t = TRANSLATIONS["en"];
 

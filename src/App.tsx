@@ -1,8 +1,8 @@
-import React from "react";
+import "react-loading-skeleton/dist/skeleton.css";
 import { Provider } from "react-redux";
 import { store } from "./context/store";
 import HomePage from "./pages/HomePage";
-import "react-loading-skeleton/dist/skeleton.css";
+import React from "react";
 import ToastConfig from "./utils/toastConfig";
 
 /**

@@ -1,8 +1,9 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { describe, it, expect } from "vitest";
 import { Provider } from "react-redux";
-import Header from "../../../components/shared/Header";
+import { render, screen } from "@testing-library/react";
 import { store } from "../../../context/store";
 import { TRANSLATIONS } from "../../../constants/translations";
+import Header from "../../../components/shared/Header";
 
 const t = TRANSLATIONS["en"];
 

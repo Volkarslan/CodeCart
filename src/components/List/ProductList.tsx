@@ -1,5 +1,5 @@
-import React from "react";
 import ProductCard from "./ProductCard";
+import React from "react";
 
 /**
  * Props for the ProductList component.

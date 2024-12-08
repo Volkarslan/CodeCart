@@ -1,8 +1,8 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { toast } from "react-toastify";
-import { getInitials } from "../utils/stringUtils";
-import { TRANSLATIONS } from "../constants/translations";
 import { CartItem, CartState } from "../types/cart";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { getInitials } from "../utils/stringUtils";
+import { toast } from "react-toastify";
+import { TRANSLATIONS } from "../constants/translations";
 
 const t = TRANSLATIONS["en"];
 

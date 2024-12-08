@@ -1,14 +1,14 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../context/store";
+import { useSelector, useDispatch } from "react-redux";
+import React from "react";
 import {
   removeItem,
   decrementQuantity,
   addItem,
 } from "../../features/cartSlice";
-import { XMarkIcon } from "@heroicons/react/24/outline";
-import { TRANSLATIONS } from "../../constants/translations";
 import { getInitials } from "../../utils/stringUtils";
+import { TRANSLATIONS } from "../../constants/translations";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 /**
  * Shopping cart component for managing and displaying cart items.

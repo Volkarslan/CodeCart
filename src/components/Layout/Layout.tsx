@@ -1,7 +1,7 @@
-import React from "react";
-import Header from "../shared/Header";
-import Footer from "../shared/Footer";
 import BackToTopButton from "../shared/BackToTopButton";
+import Footer from "../shared/Footer";
+import Header from "../shared/Header";
+import React from "react";
 
 /**
  * Layout component for wrapping pages with header, footer, and main content.
