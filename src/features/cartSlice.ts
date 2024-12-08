@@ -54,7 +54,7 @@ const cartSlice = createSlice({
       if (existingItem) {
         const initials = getInitials(existingItem.name);
         existingItem.quantity -= 1;
-        toast.info(` ${t.toastify.decreased}  ${initials}`);
+        toast.info(`${t.toastify.decreased} ${initials}`);
       }
     },
   },

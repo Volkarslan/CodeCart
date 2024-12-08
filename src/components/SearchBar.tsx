@@ -4,11 +4,19 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 const t = TRANSLATIONS["en"];
 
+/**
+ * Props for the SearchBar component.
+ */
 interface SearchBarProps {
   searchTerm: string;
   setSearchTerm: (term: string) => void;
 }
 
+/**
+ * Renders a search bar for filtering products by name.
+ * @param {SearchBarProps} props - Search term and setter function.
+ * @returns {JSX.Element} Search bar component.
+ */
 const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm }) => {
   return (
     <div className="mb-4 relative">
@@ -22,7 +30,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm }) => {
         id="search"
         type="text"
         placeholder={t.search.placeholder}
-        className="w-full py-2 border rounded-lg pl-10 pr-2"
+        className="w-full py-2 border rounded-lg pl-10 pr-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />

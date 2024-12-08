@@ -3,12 +3,20 @@ import { TRANSLATIONS } from "../constants/translations";
 
 const t = TRANSLATIONS["en"];
 
+/**
+ * Props for the CategoryFilter component.
+ */
 interface CategoryFilterProps {
   categories: string[];
   selectedCategory: string;
   setSelectedCategory: (category: string) => void;
 }
 
+/**
+ * Renders a list of category buttons for filtering products.
+ * @param {CategoryFilterProps} props - Categories, selected category, and setter function.
+ * @returns {JSX.Element} Category filter component.
+ */
 const CategoryFilter: React.FC<CategoryFilterProps> = ({
   categories,
   selectedCategory,
@@ -22,6 +30,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
           <span className="absolute bottom-0 left-0 w-52 md:w-full h-1 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full"></span>
         </h2>
       </div>
+
       {categories.map((category) => (
         <button
           key={category}

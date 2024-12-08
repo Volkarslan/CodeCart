@@ -4,7 +4,6 @@ import {
   AtSymbolIcon,
   CodeBracketIcon,
 } from "@heroicons/react/24/outline";
-
 import { TRANSLATIONS } from "../../constants/translations";
 
 const t = TRANSLATIONS["en"];
@@ -12,55 +11,46 @@ const t = TRANSLATIONS["en"];
 interface NavigationItem {
   name: string;
   href: string;
-  icon: "at-symbol" | "code-bracket" | "briefcase";
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
 const navigation: NavigationItem[] = [
   {
     name: "Gmail",
     href: "mailto:volkanugurarslan@gmail.com",
-    icon: "at-symbol",
+    Icon: AtSymbolIcon,
   },
   {
     name: "GitHub",
     href: "https://github.com/Volkarslan",
-    icon: "code-bracket",
+    Icon: CodeBracketIcon,
   },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/volkan-ugur-arslan/",
-    icon: "briefcase",
+    Icon: BriefcaseIcon,
   },
 ];
 
+/**
+ * Footer component that includes navigation links and project credits.
+ * @returns {JSX.Element} Footer component.
+ */
 const Footer: React.FC = () => {
-  const getIconComponent = (icon: NavigationItem["icon"]) => {
-    switch (icon) {
-      case "at-symbol":
-        return <AtSymbolIcon className="h-5 w-5" />;
-      case "code-bracket":
-        return <CodeBracketIcon className="h-5 w-5" />;
-      case "briefcase":
-        return <BriefcaseIcon className="h-5 w-5" />;
-      default:
-        return null;
-    }
-  };
-
   return (
-    <footer className="bg-white border-t border-gray-300 ">
+    <footer className="bg-white border-t border-gray-300">
       <div className="mx-auto max-w-7xl p-4 md:flex md:items-center md:justify-between">
         <div className="flex justify-center gap-x-6 md:order-2">
-          {navigation.map((item) => (
+          {navigation.map(({ name, href, Icon }) => (
             <a
-              key={item.name}
-              href={item.href}
+              key={name}
+              href={href}
               className="text-gray-600 duration-300 hover:text-gray-800"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="sr-only">{item.name}</span>
-              {getIconComponent(item.icon)}
+              <span className="sr-only">{name}</span>
+              <Icon className="h-5 w-5" />
             </a>
           ))}
         </div>

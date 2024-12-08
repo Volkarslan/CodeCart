@@ -2,6 +2,10 @@ import React from "react";
 import Layout from "../components/shared/Layout";
 import SearchableFilterableInfiniteScrollList from "./SearchableFilterableInfiniteScrollList";
 
+/**
+ * The main homepage component that wraps the infinite scroll list.
+ * @returns {JSX.Element} The homepage layout.
+ */
 const HomePage: React.FC = () => {
   return (
     <Layout>

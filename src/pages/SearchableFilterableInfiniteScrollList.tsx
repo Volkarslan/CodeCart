@@ -6,17 +6,23 @@ import ProductList from "../components/ProductList";
 import { MAX_PAGES, DEFAULT_CATEGORY } from "../constants/const";
 import { ArrowPathIcon } from "@heroicons/react/24/outline";
 import { TRANSLATIONS } from "../constants/translations";
+/**
+ * Product interface representing individual product details.
+ */
+interface Product {
+  id: string;
+  name: string;
+  price: string;
+  image: string;
+  category: string;
+}
 
-const t = TRANSLATIONS["en"];
-
+/**
+ * Main component for displaying a searchable, filterable, infinite scroll product list.
+ * @returns {JSX.Element} Searchable and Filterable Product List
+ */
 const SearchableFilterableInfiniteScrollList: React.FC = () => {
-  interface Product {
-    id: string;
-    name: string;
-    price: string;
-    image: string;
-    category: string;
-  }
+  const t = TRANSLATIONS["en"]; // Replace "en" with dynamic language context.
 
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<string[]>([DEFAULT_CATEGORY]);
@@ -28,6 +34,9 @@ const SearchableFilterableInfiniteScrollList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(DEFAULT_CATEGORY);
 
+  /**
+   * Fetch and load products, updating categories and pagination.
+   */
   const loadProducts = useCallback(async () => {
     if (loading || !hasMore || page > MAX_PAGES) return;
 
@@ -58,10 +67,31 @@ const SearchableFilterableInfiniteScrollList: React.FC = () => {
     setPage((prev) => prev + 1);
   }, [loading, hasMore, page, categories]);
 
+  /**
+   * Filter products based on the search term and selected category.
+   */
+  const filterProducts = useCallback(() => {
+    let filtered = allProducts;
+
+    if (searchTerm) {
+      filtered = filtered.filter((product) =>
+        product.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    if (selectedCategory !== DEFAULT_CATEGORY) {
+      filtered = filtered.filter(
+        (product) => product.category === selectedCategory
+      );
+    }
+
+    setDisplayedProducts(filtered);
+  }, [allProducts, searchTerm, selectedCategory]);
+
   useEffect(() => {
     const handleScroll = () => {
       if (
-        selectedCategory === "All" &&
+        selectedCategory === DEFAULT_CATEGORY &&
         window.innerHeight + document.documentElement.scrollTop >=
           document.documentElement.offsetHeight - 120
       ) {
@@ -80,22 +110,8 @@ const SearchableFilterableInfiniteScrollList: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    let filtered = allProducts;
-
-    if (searchTerm !== "") {
-      filtered = filtered.filter((product) =>
-        product.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    if (selectedCategory !== "All") {
-      filtered = filtered.filter(
-        (product) => product.category === selectedCategory
-      );
-    }
-
-    setDisplayedProducts(filtered);
-  }, [searchTerm, selectedCategory, allProducts]);
+    filterProducts();
+  }, [filterProducts]);
 
   return (
     <div className="flex flex-col md:flex-row max-w-screen-2xl mx-auto">
@@ -116,7 +132,7 @@ const SearchableFilterableInfiniteScrollList: React.FC = () => {
           <div className="md:w-4/5 min-h-screen">
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-            <div>
+            <div className="mb-5">
               <ProductList products={displayedProducts} />
 
               {loading && (
@@ -131,13 +147,11 @@ const SearchableFilterableInfiniteScrollList: React.FC = () => {
                 </p>
               )}
 
-              {!loading &&
-                hasMore === false &&
-                displayedProducts.length > 0 && (
-                  <p className="text-center col-span-3 mt-4 italic text-gray-500">
-                    {t.list.noMore}
-                  </p>
-                )}
+              {!loading && !hasMore && displayedProducts.length > 0 && (
+                <p className="text-center col-span-3 mt-4 italic text-gray-500">
+                  {t.list.noMore}
+                </p>
+              )}
             </div>
           </div>
         </>

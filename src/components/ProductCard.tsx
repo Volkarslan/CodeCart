@@ -4,6 +4,9 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../features/cartSlice";
 import { PlusCircleIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 
+/**
+ * Props for the ProductCard component.
+ */
 interface ProductProps {
   id: string;
   name: string;
@@ -12,6 +15,11 @@ interface ProductProps {
   category?: string;
 }
 
+/**
+ * Renders a single product card with an image, name, category, price, and add-to-cart button.
+ * @param {ProductProps} props - Product details.
+ * @returns {JSX.Element} Product card.
+ */
 const ProductCard: React.FC<ProductProps> = ({
   id,
   name,
