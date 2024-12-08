@@ -16,8 +16,8 @@ This template should help get you started developing with React in Vite.
 
 | Desktop                                                                                                                             | Mobile                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![list-desktop](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/list-desktop.webp?raw=true)    | ![cart-desktop](https://raw.githubusercontent.com/Volkarslan/home-ticket/master/public/screenshots/cart-desktop.webp?raw=true) |
-| ![list-mobile](https://raw.githubusercontent.com/Volkarslan/home-ticket/master/public/screenshots/list-mobile.webp?raw=true) | ![cart-mobile](https://raw.githubusercontent.com/Volkarslan/home-ticket/master/public/screenshots/cart-mobile.webp?raw=true) |
+| ![list-desktop](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/list-desktop.webp?raw=true)    | ![cart-desktop](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/cart-desktop.webp?raw=true) |
+| ![list-mobile](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/list-mobile.webp?raw=true) | ![cart-mobile](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/cart-mobile.webp?raw=true) |
 
 ## 🧮 Installation
 
