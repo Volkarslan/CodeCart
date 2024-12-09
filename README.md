@@ -6,7 +6,7 @@
 
 CodeCart is an e-commerce solution powered by TypeScript and React, with Redux support. It offers skeleton loaders, optimized images, and a responsive design, delivering both technical and aesthetic excellence.
 
-> **🎉 Live Project: ... 🎉**
+> **🎉 Live Project: [Netlify](https://code-cart.netlify.app/) 🎉**
 
 ## ⚛️ React + ⚡Vite
 
@@ -14,10 +14,10 @@ This template should help get you started developing with React in Vite.
 
 ## 📸 Screenshots
 
-| Desktop                                                                                                                             | Mobile                                                                                                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![list-desktop](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/list-desktop.webp?raw=true)    | ![cart-desktop](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/cart-desktop.webp?raw=true) |
-| ![list-mobile](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/list-mobile.webp?raw=true) | ![cart-mobile](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/cart-mobile.webp?raw=true) |
+| Desktop                                                                                                                     | Mobile                                                                                                                      |
+| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| ![list-desktop](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/list-desktop.webp?raw=true) | ![cart-desktop](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/cart-desktop.webp?raw=true) |
+| ![list-mobile](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/list-mobile.webp?raw=true)   | ![cart-mobile](https://raw.githubusercontent.com/Volkarslan/codecart/master/public/screenshots/cart-mobile.webp?raw=true)   |
 
 ## 🧮 Installation
 
@@ -49,7 +49,6 @@ To set up the project on your local environment, follow these steps:
 ```
 codecart/
 ├── src/
-│   ├── assets/               # Media files
 │   ├── components/           # Reusable UI components
 │   ├── constants/            # Variables and language
 │   ├── context/              # Redux store
@@ -61,6 +60,7 @@ codecart/
 │   ├── App.tsx               # Main application component
 │   └── index.tsx             # Application entry point
 ├── public/                   # Static assets and public files
+│   └── assets/               # Media files
 ├── package.json              # Project dependencies and scripts
 └── tailwind.config.js        # Tailwind CSS configuration
 └── vite.config.js            # Vite & Vitest configuration
