@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest"; // Vitest fonksiyonlarını import ediyoruz
+import { describe, it, expect } from "vitest";
 import { getInitials } from "../../utils/stringUtils";
 
 describe("getInitials", () => {

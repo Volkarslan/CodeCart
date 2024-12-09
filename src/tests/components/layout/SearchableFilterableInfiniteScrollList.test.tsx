@@ -3,7 +3,7 @@ import { fetchFakeProducts } from "../../../data/fakeData";
 import { Provider } from "react-redux";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { store } from "../../../context/store";
-import SearchableFilterableInfiniteScrollList from "../../../components/Layout/SearchableFilterableInfiniteScrollList";
+import SearchableFilterableInfiniteScrollList from "../../../components/Layout/ProductBrowser";
 
 vi.mock("../../../data/fakeData", () => ({
   fetchFakeProducts: vi.fn(),

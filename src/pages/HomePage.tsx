@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
 import React from "react";
-import SearchableFilterableInfiniteScrollList from "../components/Layout/SearchableFilterableInfiniteScrollList";
+import ProductBrowser from "../components/Layout/ProductBrowser";
 
 /**
  * The main homepage component that wraps the infinite scroll list.
@@ -9,7 +9,7 @@ import SearchableFilterableInfiniteScrollList from "../components/Layout/Searcha
 const HomePage: React.FC = () => {
   return (
     <Layout>
-      <SearchableFilterableInfiniteScrollList />
+      <ProductBrowser />
     </Layout>
   );
 };

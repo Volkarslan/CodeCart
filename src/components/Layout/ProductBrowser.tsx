@@ -21,8 +21,8 @@ interface Product {
  * Main component for displaying a searchable, filterable, infinite scroll product list.
  * @returns {JSX.Element} Searchable and Filterable Product List
  */
-const SearchableFilterableInfiniteScrollList: React.FC = () => {
-  const t = TRANSLATIONS["en"]; // Replace "en" with dynamic language context.
+const ProductBrowser: React.FC = () => {
+  const t = TRANSLATIONS["en"];
 
   const [allProducts, setAllProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<string[]>([DEFAULT_CATEGORY]);
@@ -160,4 +160,4 @@ const SearchableFilterableInfiniteScrollList: React.FC = () => {
   );
 };
 
-export default SearchableFilterableInfiniteScrollList;
+export default ProductBrowser;

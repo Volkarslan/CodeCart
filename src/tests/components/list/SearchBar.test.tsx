@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest"; // Vitest fonksiyonları
+import { describe, it, expect, vi } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { TRANSLATIONS } from "../../../constants/translations";
 import SearchBar from "../../../components/List/SearchBar";
@@ -22,7 +22,7 @@ describe("SearchBar Component", () => {
   });
 
   it("should call setSearchTerm function when typing in the input field", () => {
-    const setSearchTermMock = vi.fn(); // Vitest'in `vi` fonksiyonu kullanılıyor
+    const setSearchTermMock = vi.fn();
     render(<SearchBar searchTerm="" setSearchTerm={setSearchTermMock} />);
 
     const inputElement = screen.getByPlaceholderText(t.search.placeholder);
