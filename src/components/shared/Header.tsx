@@ -32,7 +32,7 @@ const Header: React.FC = () => {
         >
           <div className="hidden md:block flex-1">
             <img
-              src="./src/assets/codecart-logo.webp"
+              src="/assets/codecart-logo.webp"
               alt={t.project.name}
               className="inline-block h-10 md:h-16 scale-90 hover:scale-100 transition-transform duration-300 ease-in-out"
             />
